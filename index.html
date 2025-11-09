@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>給湯器故障に伴う温泉利用補償のご案内</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .header h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+
+        .notice-box {
+            background-color: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+
+        .notice-box strong {
+            color: #856404;
+        }
+
+        .card {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .card h2 {
+            color: #667eea;
+            font-size: 20px;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #667eea;
+        }
+
+        .facility {
+            background: #f8f9fa;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            border: 1px solid #e0e0e0;
+        }
+
+        .facility h3 {
+            color: #333;
+            font-size: 18px;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+        }
+
+        .facility h3::before {
+            content: "♨️";
+            margin-right: 8px;
+            font-size: 22px;
+        }
+
+        .facility-info {
+            margin: 10px 0;
+            line-height: 1.8;
+        }
+
+        .facility-info dt {
+            color: #666;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .facility-info dd {
+            margin-left: 0;
+            margin-top: 5px;
+        }
+
+        .price-table {
+            background: white;
+            border-radius: 5px;
+            overflow: hidden;
+            margin: 10px 0;
+        }
+
+        .price-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .price-row:last-child {
+            border-bottom: none;
+        }
+
+        .price-row.header-row {
+            background-color: #667eea;
+            color: white;
+            font-weight: bold;
+        }
+
+        .link-button {
+            display: inline-block;
+            background-color: #667eea;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+        }
+
+        .link-button:hover {
+            background-color: #5568d3;
+        }
+
+        .rules-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .rules-list li {
+            padding: 12px;
+            margin-bottom: 10px;
+            background: #f8f9fa;
+            border-left: 4px solid #667eea;
+            border-radius: 4px;
+        }
+
+        .rules-list li strong {
+            color: #667eea;
+        }
+
+        .important-note {
+            background-color: #fff3cd;
+            border: 2px solid #ffc107;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+
+        .important-note strong {
+            color: #856404;
+            font-size: 16px;
+        }
+
+        .highlight {
+            background-color: #ffeb3b;
+            padding: 2px 4px;
+            font-weight: bold;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+            font-size: 14px;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 10px;
+            }
+
+            .header h1 {
+                font-size: 20px;
+            }
+
+            .card {
+                padding: 15px;
+            }
+
+            .price-row {
+                flex-direction: column;
+                gap: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>給湯器故障に伴う<br>温泉利用補償のご案内</h1>
+            <p>お風呂が使用できない期間における温泉施設のご利用について</p>
+        </div>
+
+        <div class="notice-box">
+            <strong>⚠️ 重要なお知らせ</strong><br>
+            給湯器の故障により、お風呂がご利用いただけない期間について、以下の温泉施設をご利用いただけます。
+        </div>
+
+        <div class="card">
+            <h2>🏨 ご利用可能な温泉施設</h2>
+
+            <div class="facility">
+                <h3>元気の湯</h3>
+                <dl class="facility-info">
+                    <dt>📍 住所</dt>
+                    <dd>宮城県石巻市大街道北1-6-29</dd>
+                    
+                    <dt>📞 電話番号</dt>
+                    <dd><a href="tel:0225-92-5226">0225-92-5226</a></dd>
+                    
+                    <dt>🕐 営業時間</dt>
+                    <dd>9:00～23:00（最終受付 22:00）</dd>
+                    
+                    <dt>💴 料金</dt>
+                    <dd>
+                        <div class="price-table">
+                            <div class="price-row">
+                                <span>大人</span>
+                                <span>1,000円</span>
+                            </div>
+                            <div class="price-row">
+                                <span>中学生</span>
+                                <span>900円</span>
+                            </div>
+                            <div class="price-row">
+                                <span>小学生</span>
+                                <span>450円</span>
+                            </div>
+                            <div class="price-row">
+                                <span>未就学児</span>
+                                <span>無料</span>
+                            </div>
+                        </div>
+                    </dd>
+                    
+                    <dt>🌐 公式サイト</dt>
+                    <dd>
+                        <a href="https://genkinoyu.com/" target="_blank" class="link-button">
+                            公式サイトを見る
+                        </a>
+                    </dd>
+                </dl>
+            </div>
+
+            <div class="facility">
+                <h3>ふたごの湯（道の駅 上品の郷）</h3>
+                <dl class="facility-info">
+                    <dt>📍 住所</dt>
+                    <dd>宮城県石巻市小船越二子北下1-1</dd>
+                    
+                    <dt>📞 電話番号</dt>
+                    <dd><a href="tel:0225-62-4126">0225-62-4126</a></dd>
+                    
+                    <dt>🕐 営業時間</dt>
+                    <dd>9:00～21:00（最終受付 20:30）</dd>
+                    
+                    <dt>🚫 定休日</dt>
+                    <dd>毎月第4火曜日</dd>
+                    
+                    <dt>💴 料金</dt>
+                    <dd>
+                        <strong>【平日】</strong>
+                        <div class="price-table">
+                            <div class="price-row">
+                                <span>大人</span>
+                                <span>650円</span>
+                            </div>
+                            <div class="price-row">
+                                <span>小中学生</span>
+                                <span>300円</span>
+                            </div>
+                            <div class="price-row">
+                                <span>小学生未満</span>
+                                <span>無料</span>
+                            </div>
+                        </div>
+                        
+                        <strong>【土日祝】</strong>
+                        <div class="price-table">
+                            <div class="price-row">
+                                <span>大人</span>
+                                <span>780円</span>
+                            </div>
+                            <div class="price-row">
+                                <span>小中学生</span>
+                                <span>300円</span>
+                            </div>
+                            <div class="price-row">
+                                <span>小学生未満</span>
+                                <span>無料</span>
+                            </div>
+                        </div>
+                    </dd>
+                    
+                    <dt>🌐 公式サイト</dt>
+                    <dd>
+                        <a href="https://joubon.com/" target="_blank" class="link-button">
+                            公式サイトを見る
+                        </a>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>📋 補償内容と利用ルール</h2>
+            
+            <ul class="rules-list">
+                <li>
+                    <strong>✅ 利用可能施設：</strong><br>
+                    上記の温泉施設以外でも構いません
+                </li>
+                
+                <li>
+                    <strong>💰 補償金額：</strong><br>
+                    大人1人当たり<span class="highlight">日額最大1,000円</span>まで補償
+                </li>
+                
+                <li>
+                    <strong>🎫 回数券の利用：</strong><br>
+                    回数券がある場合は、回数券をご利用ください<br>
+                    回数券利用の方が安い場合、差額は自己負担となります
+                </li>
+                
+                <li>
+                    <strong>💵 超過分の負担：</strong><br>
+                    1,000円を超過した場合、超過分は自己負担となります
+                </li>
+                
+                <li>
+                    <strong>🚗 交通費について：</strong><br>
+                    原則として交通費の支出は行いません
+                </li>
+            </ul>
+
+            <div class="important-note">
+                <strong>⚠️ 必ずお読みください</strong><br><br>
+                
+                <strong>📝 領収書の取得が必須です</strong><br>
+                ・温泉施設で必ず領収書を受け取ってください<br>
+                ・領収書のないものは補償対象外（自己負担）となります<br>
+                ・後日、領収書を提示いただき清算いたします<br><br>
+                
+                <strong>💳 清算方法</strong><br>
+                領収書提示による後日清算となります
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>❓ よくある質問</h2>
+            
+            <div style="margin-top: 15px;">
+                <strong>Q: 補償対象となるのは誰ですか？</strong><br>
+                <p style="margin: 10px 0 20px 0; background-color: #fff3cd; padding: 10px; border-radius: 5px;">A: <strong>契約者及び申請されている同居人分のみ</strong>が補償対象となります。申請されていない方の利用は補償対象外となりますのでご注意ください。</p>
+                
+                <strong>Q: 毎日利用しても良いですか？</strong><br>
+                <p style="margin: 10px 0 20px 0;">A: はい、給湯器が使用できない期間中は毎日ご利用いただけます。ただし、1日あたり最大1,000円までの補償となります。</p>
+                
+                <strong>Q: 子供の料金も補償されますか？</strong><br>
+                <p style="margin: 10px 0 20px 0;">A: 申請されている同居人（小中学生）の料金も補償対象となります。ただし、実費相当額のみとなります。</p>
+                
+                <strong>Q: 領収書を紛失した場合はどうなりますか？</strong><br>
+                <p style="margin: 10px 0 20px 0;">A: 大変申し訳ございませんが、領収書のないものは補償対象外となります。必ず領収書を保管してください。</p>
+                
+                <strong>Q: 他の温泉施設を利用しても良いですか？</strong><br>
+                <p style="margin: 10px 0 20px 0;">A: はい、上記以外の施設でも構いません。ただし、交通費は補償対象外となりますのでご注意ください。</p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>ご不明な点がございましたら、管理会社までお問い合わせください</p>
+            <p style="margin-top: 10px; font-size: 12px;">※ このページは給湯器故障期間中のみ有効です</p>
+        </div>
+    </div>
+</body>
+</html>
